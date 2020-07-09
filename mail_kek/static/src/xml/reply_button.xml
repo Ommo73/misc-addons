@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <t t-extend="mail.widget.Thread.Message">
+        <t t-jquery="span[t-attf-class*='o_thread_icons']>*:last" t-operation="after">
+            <i t-if="options.displayStars and !message.isSystemNotification() and !message.needsModeration()"
+                t-att-class="'fa fa-lg o_thread_icon message_save ' + (message.isStarred() ? 'fa-bookmark' : 'fa-bookmark-o')"
+                t-att-data-message-id="message.getID()" title="Mark as Todooooo" role="img" aria-label="Mark as Todooooo"/>
+        </t>
+    </t>
+</template>
