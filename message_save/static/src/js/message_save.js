@@ -1,4 +1,4 @@
-odoo.define('mail_reply.reply', function (require) {
+odoo.define('message_save.save', function (require) {
 "use strict";
 
 var ThreadWidget = require('mail.widget.Thread');

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <template id="message_save_assets_backend"
+                  name="message_save_assets_backend"
+                  inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script src="/message_save/static/src/js/message_save.js" type="text/javascript"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

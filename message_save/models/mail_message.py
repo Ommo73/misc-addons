@@ -8,7 +8,14 @@ class MailMessage(models.Model):
     def save_partner_message(self, message_id):
         message = self.env['mail.message'].browse(message_id)
         partner = message.author_id
-        message_text = message.body
+        message_body = message.body
         current_user = self.env['res.users'].browse(self._context.get('uid'))
-        import wdb
-        wdb.set_trace()
+        kwargs = {
+            'author_id': current_user.partner_id.id
+        }
+        partner.message_post(
+            body=message_body,
+            message_type='comment',
+            subtype='mail.mt_note',
+            **kwargs,
+        )
