@@ -3,7 +3,7 @@
     "summary": """Added save button to the message""",
     "category": "Discuss",
     "images": [],
-    "version": "1.0.0",
+    "version": "12.0.1.0.0",
 
     "author": "Artem Rafailov",
     "support": "",
