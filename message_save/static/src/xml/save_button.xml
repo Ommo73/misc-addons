@@ -6,5 +6,10 @@
                t-att-class="'fa fa-lg o_thread_icon message_save ' + (message.isSaved() ? 'fa-bookmark' : 'fa-bookmark-o')"
                t-att-data-message-id="message.getID()" title="Save message" role="img" aria-label="Save message"/>
         </t>
+        <t t-jquery="span.o_thread_message_side_date" t-operation="after">
+            <i t-if="!displayAuthorMessages[message.getID()] and options.displayStars and message.getType() !== 'notification' and message.getDocumentModel() == 'mail.channel'"
+               t-att-class="'fa o_thread_icon message_save ' + (message.isSaved() ? 'fa-bookmark' : 'fa-bookmark-o')"
+               t-att-data-message-id="message.getID()" title="Save message" role="img" aria-label="Save message"/>
+        </t>
     </t>
 </template>
